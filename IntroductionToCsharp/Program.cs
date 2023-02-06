@@ -12,6 +12,10 @@ class Project
         Console.WriteLine("Enter your Last Name");
         string LastName = Console.ReadLine();
 
+        Console.WriteLine("Enter your Age");
+        string Age = Console.ReadLine();
+
         Console.WriteLine("Hello {0} {1}",FirstName,LastName);
+        Console.WriteLine("Your age is {2}", Age);
     }
 }
