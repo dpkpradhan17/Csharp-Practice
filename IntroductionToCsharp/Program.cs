@@ -6,16 +6,13 @@ class Project
 {
     static void Main()
     {
-        Console.WriteLine("Enter your First Name");
-        string FirstName = Console.ReadLine();
+        Console.WriteLine("Enter the number: ");
+        int n = int.Parse(Console.ReadLine());
 
-        Console.WriteLine("Enter your Last Name");
-        string LastName = Console.ReadLine();
-
-        Console.WriteLine("Enter your Age");
-        string Age = Console.ReadLine();
-
-        Console.WriteLine("Hello {0} {1}",FirstName,LastName);
-        Console.WriteLine("Your age is {2}", Age);
+        for(int i = 10; i > 0; i--)
+        {
+            int product = n * i;
+            Console.WriteLine("{n} * {i} = {2}", n, i, product);
+        }
     }
 }
