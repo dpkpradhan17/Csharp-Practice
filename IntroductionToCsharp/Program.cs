@@ -4,15 +4,38 @@ using System;
 
 class Project
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        Console.WriteLine("Enter the number: ");
-        int n = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter the string: ");
+        string input = Console.ReadLine();
 
-        for(int i = 10; i > 0; i--)
+        bool result = input.All(Char.IsLetter);
+
+        if(result)
         {
-            int product = n * i;
-            Console.WriteLine("{n} * {i} = {2}", n, i, product);
+            Console.Write(input);
+            for(int i=0;i<input.Length;i++)
+            {
+                int val = input[i];
+                if(val == 122 || val == 90)
+                {
+                    val -= 25;
+                }
+                /*else if(val == 90)
+                {
+                    val -= 25;
+                }*/
+                else if (i%2 == 0)
+                {
+                    val += 1;
+                }
+              //Console.WriteLine(val);
+              Console.Write(Convert.ToChar(val));
+            }
+        }
+        else
+        {
+            Console.WriteLine("Invalid input");
         }
     }
 }
